@@ -1348,7 +1348,7 @@ class P4UserMap:
 
     def getUserCacheFilename(self):
         home = os.environ.get("HOME", os.environ.get("USERPROFILE"))
-        return home + "/.gitp4-usercache.txt"
+        return os.path.join(home,".gitp4-usercache.txt")
 
     def getUserMapFromPerforceServer(self):
         if self.userMapFromPerforceServer:
